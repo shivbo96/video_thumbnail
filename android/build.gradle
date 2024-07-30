@@ -24,6 +24,10 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 33
 
+     if (project.android.hasProperty("namespace")) {
+        namespace "xyz.justsoft.video_thumbnail"
+    }
+
     defaultConfig {
         minSdkVersion 16
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
